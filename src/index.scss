@@ -1,0 +1,10 @@
+@import "./shared.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, $rgba-primary-3, $rgba-primary-4);
+}
+
+

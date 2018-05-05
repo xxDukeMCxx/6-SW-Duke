@@ -1,0 +1,47 @@
+@import "../shared.scss";
+
+.App {
+  text-align: right;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+}
+
+/* MOBILE */
+ @media (max-width: 599px) {
+  .App {
+    grid-template-columns: [banner-start myMenu-start lstgau-start main-start ] 100% [ banner-end myMenu-end lstgau-end main-end];
+    grid-template-rows: [banner-start] max-content [banner-end myMenu-start] max-content [myMenu-end main-start] auto [main-end lstgau-start] max-content [lstgau-end] ;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 600px) {
+  .App {
+    grid-template-columns: [ banner-start myMenu-start lstgau-start ] 1fr [ lstgau-end main-start ] 4fr [banner-end myMenu-end main-end];
+    grid-template-rows: [banner-start] max-content [banner-end myMenu-start] max-content [myMenu-end lstgau-start main-start] auto [lstgau-end main-end];
+  }
+}
+
+
+.bannerContainer {
+  grid-area: banner;
+  /*display: flex;*/
+}
+
+.myMenuContainer {
+  grid-area: myMenu;
+  /*display: flex; */
+}
+
+.lstgauContainer {
+  grid-area: lstgau;
+ /*display: flex;*/
+}
+
+.mainContainer {
+  grid-area: main;
+  /*display: flex;*/
+}
