@@ -25,7 +25,6 @@ const MainContainer = ({detailToShow, loadingInProgress, loadingHowMany})=> {
         for (const prop in detailToShow) {
             if (!ignoredProp.includes(prop)) {
                 nbElem++;
-                let isURL = false;
                 //detect if value is an Array
                 if (Array.isArray(detailToShow[prop])) { // if it's an Array, split each element  
                     
