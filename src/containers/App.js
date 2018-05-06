@@ -89,7 +89,7 @@ class App extends Component {
     //need to check if we are still the lastr "ressourceTypeChange" asked, else we don't change anything and die in silence
 
     
-    if (this.state.ressourceRecordsLoadingIndex==myIndex) {
+    if (this.state.ressourceRecordsLoadingIndex===myIndex) {
       /* console.warn ('apply it'); */
       this.setState ({ ressourceRecordsLoading : false});
       this.setState ({ ressourceRecordsPropKeyName : newPropKeyName });
@@ -161,7 +161,7 @@ class App extends Component {
       }
     }
 
-    if (this.state.ressourceDetailLoadingIndex==myIndex) {
+    if (this.state.ressourceDetailLoadingIndex===myIndex) {
       this.setState ({ ressourceDetail : myDetail})
       this.setState ({ ressourceDetailLoading : false});
       console.log ("Promise ressourceRecordChange N° ", myIndex, " applying cause it is the current promise awaiting for (",this.state.ressourceDetailLoadingIndex,")");
