@@ -16,3 +16,20 @@
     
 }
 
+
+@media (max-width: 599px) {
+    
+
+    .bannerContainer {
+    
+        & h1 {
+            margin : 5px 0px;
+            padding: 0px;
+            color : $rgba-primary-1;
+            text-align: center;
+            font-size: 1rem;
+        } 
+        
+    }
+
+}

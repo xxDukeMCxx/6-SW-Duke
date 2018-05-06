@@ -2,9 +2,9 @@
 
 .myMenuContainer {
     display: flex;
-    align-content: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-flow: row;
+/*     align-content: stretch; */
+
     background-color: transparent;
     width: 100%;
     border-bottom: 1px solid $rgba-line;
@@ -38,3 +38,23 @@
 
 }
 
+
+@media (min-width: 600px) {
+    .myMenuContainer {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 599px) {
+    
+    .myMenuContainer {
+        width: auto;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden; 
+    }
+
+}

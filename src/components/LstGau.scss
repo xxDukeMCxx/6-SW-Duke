@@ -43,6 +43,9 @@
         border: 1px solid $rgba-secondary-2-1;
         margin : 5px 20px;
         border-radius: 10px;
+        display : flex;
+        align-items: center;
+        justify-content: center;
 
         &:hover {
             cursor: pointer;

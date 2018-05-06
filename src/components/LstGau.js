@@ -3,10 +3,10 @@ import './LstGau.css';
 import '../lib/animate.css';
 /* import _ from 'lodash'; */
 
-const LstGau = ({lstGauItems, propKeyName, loadingInProgress, loadingHowMany})=> {
+const LstGau = ({lstGauItems, propKeyName, loadingInProgress, loadingHowMany,onClickFunc})=> {
 
     /* console.log("RRRRRR :", lstGauItems); */
-    console.log ("loadingHowMany", loadingHowMany);
+    /* console.log ("loadingHowMany", loadingHowMany); */
 
     let lstGauJSX = [];
 
@@ -16,10 +16,9 @@ const LstGau = ({lstGauItems, propKeyName, loadingInProgress, loadingHowMany})=>
     }
 
     lstGauItems.forEach(Item => {
-        lstGauJSX.push (<div className="animated bounceInUp" key={`"_lstGau_${Item[propKeyName]}"`}><p>{Item[propKeyName]}</p></div>)
+        lstGauJSX.push (<div className="animated bounceInUp" key={`"_lstGau_${Item[propKeyName]}"`} onClick={onClickFunc.bind(this,Item[propKeyName])}><p>{Item[propKeyName]}</p></div>)
     });
     
-
     return (
         <div className="lstGauContainer">
             {lstGauJSX}
@@ -27,9 +26,6 @@ const LstGau = ({lstGauItems, propKeyName, loadingInProgress, loadingHowMany})=>
     )
 
 }
-
-
-
 
 export default LstGau;
 
