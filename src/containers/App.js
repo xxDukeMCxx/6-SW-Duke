@@ -74,8 +74,8 @@ class App extends Component {
       await fetch(fetchURL)
       .then (pipe => pipe.json ())
       .then (pipe => {
-          console.log("nextURL :", nextURL);
           nextURL= pipe['next'];
+          console.log("nextURL :", nextURL);          
           fetchURL = nextURL;
           newRecords = newRecords.concat(pipe['results']);
           howManyCounter = newRecords.length;
@@ -134,7 +134,7 @@ class App extends Component {
     if (_debug) console.log("Set ressourceRecordActive =", arg1, "-- fetching :", fetchURL );
 
     let myDetail =  await fetch(fetchURL)
-                          .then (pipe => pipe.json());
+                         .then (pipe => pipe.json());
 
     //parse detail to found URL and change them by array of value....
 
